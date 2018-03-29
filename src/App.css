@@ -15,7 +15,6 @@
 }
 
 .App > * {
-  background: dodgerblue;
   display: flex;
   justify-content: center;
   align-items: center;
