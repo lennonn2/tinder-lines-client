@@ -28,7 +28,8 @@ const filterLines = (categories) => {
 
 const fetchLine = (storeFn, categories) => {
     const filteredLines = filterLines(categories)
-    const msg = filteredLines[Math.floor(Math.random()*filteredLines.length)].message;
+    const randomLine = filteredLines[Math.floor(Math.random()*filteredLines.length)];
+    const msg = randomLine ? randomLine.message : 'Sorry no message available';
     storeFn(msg, 'message'); 
 }
 

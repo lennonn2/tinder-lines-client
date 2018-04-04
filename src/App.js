@@ -7,7 +7,7 @@ import Checkboxes from './components/Checkboxes.jsx';
 
 let store = {
   message: ['Initial message'],
-  categories: ['funny', 'cheesy', 'risky', 'stupid', 'pickup line', 'questions']
+  categories: ['funny', 'cheesy', 'risky', 'stupid', 'pickup', 'questions']
 };
 
 class App extends Component {
@@ -18,11 +18,13 @@ class App extends Component {
           ...store,
           message: newVal
         }
+        break;
       case 'categories':
         store = {
           ...store,
           categories: newVal
         }
+        break;
     }
     this.forceUpdate();
   }
