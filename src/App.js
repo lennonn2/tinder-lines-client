@@ -34,7 +34,6 @@ class App extends Component {
           <Checkboxes
             class="checkboxes"
             id="checkboxes"
-            categories={categories}
           />
           <div class="ad2" id="ad2">Ad 2</div>
           <footer>Footer</footer>

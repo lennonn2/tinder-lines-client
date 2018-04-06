@@ -1,8 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { toggleCategory } from '../actions';
+import Checkbox from './Checkbox.jsx'
 
 let div;
 
-const checkboxes = () => {
+const checkboxes = (el) => {
+
   const categories = [...div.children]
     .filter((el) => {
       return el.type === 'checkbox' && el.checked;
@@ -13,15 +18,27 @@ const checkboxes = () => {
   // return updateStore(categories, 'categories');
 }
 
-export default ({}) => {
+const mapStateToProps = ({ categories }) => {
+  return {
+    categories
+  }
+}
+
+const Checkboxes = ({ categories, onCheckBoxClick }) => {
   return (
-    <div onClick={checkboxes} ref={(el) => { div = el }}>
-      <input defaultChecked type="checkbox" name="funny" value="funny" />Funny<br/>
-      <input defaultChecked type="checkbox" name="cheesy" value="cheesy" />Cheesy<br/>
-      <input defaultChecked type="checkbox" name="risky" value="risky" />Risky<br/>
-      <input defaultChecked type="checkbox" name="stupid" value="stupid" />Stupid<br/>
-      <input defaultChecked type="checkbox" name="pickup" value="pickup" />Pickup Line<br/>
-      <input defaultChecked type="checkbox" name="question" value="question" />Question<br/>
+    <div>
+      {categories.map(category =>
+        <Checkbox
+          key={category.id}
+          type="checkbox"
+          id={category.id}
+          checked={category.checked}
+          label={category.value}
+          onClick={() => onCheckBoxClick(category.id)}
+        />
+      )}
     </div>
   )
 }
+
+export default connect(mapStateToProps, { onCheckBoxClick: toggleCategory })(Checkboxes);
