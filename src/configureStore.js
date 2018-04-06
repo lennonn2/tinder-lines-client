@@ -11,6 +11,9 @@ const configureStore = () => {
     }
   }
   
+  // add default categories state
+  // import initialState from '../state/initialState.js'
+  // const categories = (state = initialState.categories, action) =>
   const categories = (state = [], action) => {
     switch(action.type) {
       case 'TOGGLE_CATEGORY':

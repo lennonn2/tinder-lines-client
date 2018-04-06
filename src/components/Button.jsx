@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import { connect } from 'react-redux';
 
 import { updateMessage } from '../actions';
 
@@ -37,6 +38,8 @@ const fetchLine = (categories) => {
     return msg;
 }
 
-export default ({ dispatch, categories }) => {
+const Button = ({ dispatch, categories }) => {
     return <button onClick={() => {dispatch(updateMessage(fetchLine(categories)))}}>Click Me</button>;
 }
+
+export default connect()(Button);
