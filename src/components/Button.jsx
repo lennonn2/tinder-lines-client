@@ -1,6 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 
+import { updateMessage } from '../actions';
+
 const data = {
     lines: [{
         "message": ["test message"],
@@ -20,19 +22,21 @@ const data = {
 };
 
 const filterLines = (categories) => {
+    const cats = categories.map(c => c.id);
+
     return data.lines
         .filter((line) => {
-            return _.intersection(line.categories, categories).length > 0;
+            return _.intersection(line.categories, cats).length > 0;
         })
 }
 
-const fetchLine = (storeFn, categories) => {
+const fetchLine = (categories) => {
     const filteredLines = filterLines(categories)
     const randomLine = filteredLines[Math.floor(Math.random()*filteredLines.length)];
     const msg = randomLine ? randomLine.message : 'Sorry no message available';
-    storeFn(msg, 'message'); 
+    return msg;
 }
 
-export default ({updateStore, categories}) => {
-    return <button onClick={() => {fetchLine(updateStore, categories)}}>Click Me</button>;
+export default ({ dispatch, categories }) => {
+    return <button onClick={() => {dispatch(updateMessage(fetchLine(categories)))}}>Click Me</button>;
 }

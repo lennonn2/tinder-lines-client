@@ -2,7 +2,7 @@ import React from 'react';
 
 let div;
 
-const checkboxes = (updateStore) => {
+const checkboxes = () => {
   const categories = [...div.children]
     .filter((el) => {
       return el.type === 'checkbox' && el.checked;
@@ -10,12 +10,12 @@ const checkboxes = (updateStore) => {
     .map((el) => {
       return el.value;
     })
-  return updateStore(categories, 'categories');
+  // return updateStore(categories, 'categories');
 }
 
-export default ({updateStore}) => {
+export default ({}) => {
   return (
-    <div onClick={() => checkboxes(updateStore)} ref={(el) => { div = el }}>
+    <div onClick={checkboxes} ref={(el) => { div = el }}>
       <input defaultChecked type="checkbox" name="funny" value="funny" />Funny<br/>
       <input defaultChecked type="checkbox" name="cheesy" value="cheesy" />Cheesy<br/>
       <input defaultChecked type="checkbox" name="risky" value="risky" />Risky<br/>
