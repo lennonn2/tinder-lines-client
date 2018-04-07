@@ -4,20 +4,6 @@ import { connect } from 'react-redux';
 import { toggleCategory } from '../actions';
 import Checkbox from './Checkbox.jsx'
 
-let div;
-
-const checkboxes = (el) => {
-
-  const categories = [...div.children]
-    .filter((el) => {
-      return el.type === 'checkbox' && el.checked;
-    })
-    .map((el) => {
-      return el.value;
-    })
-  // return updateStore(categories, 'categories');
-}
-
 const mapStateToProps = ({ categories }) => {
   return {
     categories

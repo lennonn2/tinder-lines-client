@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import { combineReducers } from 'redux';
 
 import defaultState from '../defaults';
 
