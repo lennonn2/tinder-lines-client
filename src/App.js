@@ -20,7 +20,7 @@ class App extends Component {
       <Provider store={this.props.store}>
         <div className="App">
           <header>Header</header>
-          <div class="ad1" id="ad1">Ad 1</div>
+          <div className="ad1" id="ad1">Ad 1</div>
           <Message 
             className="message"
             id="message"
@@ -35,7 +35,7 @@ class App extends Component {
             class="checkboxes"
             id="checkboxes"
           />
-          <div class="ad2" id="ad2">Ad 2</div>
+          <div className="ad2" id="ad2">Ad 2</div>
           <footer>Footer</footer>
         </div>
       </Provider>

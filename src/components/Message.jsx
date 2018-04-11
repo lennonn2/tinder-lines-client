@@ -2,7 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Message = ({content}) => {
-  const elements = content.map((msg) => <p>{msg}</p>);
+  let count = 0;
+  const elements = content.map((msg) => {
+   return <p key={count++}>{msg}</p>
+  });
   return <div>{elements}</div>;
 }
 

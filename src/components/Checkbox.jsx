@@ -15,7 +15,7 @@ export default ({
         name={id}
         value={id}
         checked={checked}
-        onClick={onClick}
+        onChange={onClick}
       />{label}
     </div>
   )
