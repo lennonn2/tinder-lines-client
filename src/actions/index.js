@@ -1,3 +1,10 @@
+const setMessages = (messages) => {
+  return {
+    type: 'SET_MESSAGES',
+    messages,
+  }
+}
+
 export const updateMessage = () => {
   return {
     type: 'UPDATE_MESSAGE'

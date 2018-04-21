@@ -27,5 +27,5 @@ export default {
     value: 'Question',
     checked: true,
   }],
-  lines: mockData.lines,
+  lines: [],
 }
