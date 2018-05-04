@@ -2,7 +2,6 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import reducers from './reducers';
-import { getMessages } from './actions';
 import defaultState from './defaults';
 
 const configureStore = (lines) => {

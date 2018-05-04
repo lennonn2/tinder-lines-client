@@ -1,5 +1,3 @@
-import mockData from './mockData';
-
 export default {
   message: ['Welcome message'],
   categories: [{

@@ -13,7 +13,7 @@ const getLines = async () => {
   });
   return response.json();
 }
-const storeLines = getLines()
+getLines()
   .then(lines => {
     const store = configureStore(lines);
     ReactDOM.render(<App store={store} />, document.getElementById('root'));
