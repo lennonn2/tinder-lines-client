@@ -12,7 +12,7 @@ export default (state = defaultState, action) => {
       const matchingLines = _(state.lines)
         .filter(line => !_.isEmpty(_.intersection(line.categories, checkedCategories)))
         .value();
-      const message = _.isEmpty(matchingLines) ? 'Sorry, no message available' : _.sample(matchingLines).message;
+      const message = _.isEmpty(matchingLines) ? ['Sorry, no message available'] : _.sample(matchingLines).messages;
       return {
         ...state,
         message,

@@ -6,8 +6,15 @@ import Button from './components/Button.jsx';
 import Checkboxes from './components/Checkboxes.jsx';
 import { Provider } from 'react-redux';
 
-class App extends Component {
+const fetchLines = () => {
+  fetch('https://qvqnyun7pl.execute-api.us-east-1.amazonaws.com/prod/lines', {
+    headers: {
+      categories: ['cheesy', 'funny']
+    }
+  })
+}
 
+class App extends Component {
   render() {
     const { store } = this.props;
     const state = store.getState();
