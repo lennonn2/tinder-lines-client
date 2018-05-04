@@ -12,7 +12,22 @@ export default (state = defaultState, action) => {
       const matchingLines = _(state.lines)
         .filter(line => !_.isEmpty(_.intersection(line.categories, checkedCategories)))
         .value();
-      const message = _.isEmpty(matchingLines) ? ['Sorry, no message available'] : _.sample(matchingLines).messages;
+      let message;
+      if (_.isEmpty(matchingLines)) {
+        message = {
+          id: 0,
+          lines: [{
+            index: 0,
+            text: ['Sorry, no message available'],
+          }]
+        };
+      } else {
+        const randomMessage = _.sample(matchingLines);
+        message = {
+          id: randomMessage.lineId,
+          lines: randomMessage.messages
+        };
+      }
       return {
         ...state,
         message,
