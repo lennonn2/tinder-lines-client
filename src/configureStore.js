@@ -18,7 +18,6 @@ const configureStore = (lines) => {
       applyMiddleware(thunk)
     )
   );
-  // error => dispatch(apologize('The Sandwich Shop', forPerson, error))
   return store;
 } 
 
