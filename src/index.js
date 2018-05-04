@@ -11,12 +11,11 @@ const getLines = async () => {
       categories: ['cheesy', 'funny', 'risky', 'stupid', 'pickup', 'question']
     }
   });
-  const lines = await response.json();
-  return lines;
+  return response.json();
 }
 const storeLines = getLines()
   .then(lines => {
-    const store = configureStore(storeLines);
+    const store = configureStore(lines);
     ReactDOM.render(<App store={store} />, document.getElementById('root'));
     registerServiceWorker();
   });
