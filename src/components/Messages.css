@@ -1,10 +1,9 @@
 .messagesContainer {
   flex-direction: column;
-  min-height: 150px;
-  max-height: 400px;
+  height: 400px;
   align-items: flex-end;
-  max-width: 400px;
-  min-width: 330px;
+  max-width: 340px;
+  min-width: 270px;
   justify-self: center;
   justify-content: flex-start;
   padding: 30px;
