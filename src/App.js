@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Message from './components/Message.jsx';
+import Messages from './components/Messages.jsx';
 import Button from './components/Button.jsx';
 import Checkboxes from './components/Checkboxes.jsx';
 import { Provider } from 'react-redux';
@@ -20,9 +20,9 @@ class App extends Component {
         <div className="App">
           <header>Header</header>
           <div className="ad1" id="ad1">Ad 1</div>
-          <Message 
-            className="message"
-            id="message"
+          <Messages
+            className="messages"
+            id="messages"
             content={message}
           />
           <Button

@@ -1,0 +1,18 @@
+.messagesContainer {
+  flex-direction: column;
+  min-height: 150px;
+  max-height: 400px;
+  align-items: flex-end;
+  max-width: 400px;
+  min-width: 330px;
+  justify-self: center;
+  justify-content: flex-start;
+  padding: 30px;
+  margin: 0 10px;
+  border: solid;
+  border-color: grey;
+  border-width: 1px;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
