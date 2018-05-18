@@ -1,5 +1,12 @@
 export default {
-  message: ['Welcome message'],
+  message: {
+    id: 0,
+    lines: [{
+      text: 'Welcome message',
+      index: 0,
+      isReply: false,
+    }]
+  },
   categories: [{
     id: 'funny',
     value: 'Funny',
