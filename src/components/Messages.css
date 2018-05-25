@@ -1,6 +1,6 @@
 .messagesContainer {
   flex-direction: column;
-  height: 400px;
+  height: 300px;
   align-items: flex-end;
   max-width: 340px;
   min-width: 270px;
@@ -12,6 +12,5 @@
   border-color: grey;
   border-width: 1px;
   border-radius: 5px;
-  overflow: scroll;
+  overflow: auto;
 }
-
