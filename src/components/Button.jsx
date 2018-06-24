@@ -9,9 +9,9 @@ import './Button.css';
 const Button = ({ updateMessage, categories }) => {
   return (
     <div className='buttonContainer'>
-      <button className='button' onClick={updateMessage}>Generate
+      <a className='button' onClick={updateMessage}>Generate
         <Logo />
-      </button>
+      </a>
     </div>
   );
 }
