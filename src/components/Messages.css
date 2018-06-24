@@ -12,6 +12,6 @@
   border-color: grey;
   border-width: 1px;
   border-radius: 5px;
-  overflow: scroll;
+  overflow: auto;
 }
 
