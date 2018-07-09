@@ -1,4 +1,5 @@
 import React from 'react';
+import './Checkbox.css';
 
 export default ({
   id,
@@ -8,15 +9,17 @@ export default ({
   onClick,
 }) => {
   return (
-    <div>
+    <label className='cbx-container'>
       <input
         key={id}
         type="checkbox"
         name={id}
         value={id}
-        checked={checked}
-        onChange={onClick}
-      />{label}
-    </div>
+        defaultChecked={checked}
+      />
+      <span
+        className='checkmark'
+      ></span>{label}
+    </label>
   )
 }
