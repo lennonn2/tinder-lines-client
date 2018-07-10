@@ -1,0 +1,27 @@
+.checkboxGrid {
+  display: grid;
+  grid-gap: 25px 35px;
+
+  grid-template-areas:
+    "checkbox checkbox"
+    "checkbox checkbox"
+    "checkbox checkbox";
+  
+}
+
+.checkboxGrid > * {
+  display: flex;
+  align-items: flex-start;
+  min-height: 24px;
+  align-items: center;
+}
+
+@media (min-width: 500px) {
+  .checkboxGrid {
+    grid-template-areas:
+      "checkbox checkbox checkbox"
+      "checkbox checkbox checkbox";
+
+    grid-gap: 25px 35px;
+  }
+}

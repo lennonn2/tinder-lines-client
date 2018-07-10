@@ -30,3 +30,9 @@
   fill: white;
   stroke: white;
 }
+
+@media (max-width: 500px) {
+  .buttonContainer {
+    padding-bottom: 15px;
+  }
+}
