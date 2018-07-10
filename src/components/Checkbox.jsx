@@ -16,6 +16,7 @@ export default ({
         name={id}
         value={id}
         defaultChecked={checked}
+        onChange={onClick}
       />
       <span
         className='checkmark'
