@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { toggleCategory } from '../actions';
 import Checkbox from './Checkbox.jsx'
 
+import './Checkboxes.css';
+
 const mapStateToProps = ({ categories }) => {
   return {
     categories
@@ -12,7 +14,7 @@ const mapStateToProps = ({ categories }) => {
 
 const Checkboxes = ({ categories, onCheckBoxClick }) => {
   return (
-    <div>
+    <div className='checkboxGrid'>
       {categories.map(category =>
         <Checkbox
           key={category.id}

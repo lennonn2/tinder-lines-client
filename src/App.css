@@ -11,7 +11,7 @@
     "checkboxes"
     "ad2"
     "footer";
-  grid-template-rows: 50px 100px 2fr 50px 2fr 100px 50px;
+  grid-template-rows: 50px 100px 2fr 75px 2fr 100px 50px;
 }
 
 .App > * {
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .App {
     grid-template-areas: 
       "header header"
