@@ -5,6 +5,7 @@ import Messages from './components/Messages.jsx';
 import Button from './components/Button.jsx';
 import Checkboxes from './components/Checkboxes.jsx';
 import { Provider } from 'react-redux';
+import Snackbar from '@material-ui/core/Snackbar';
 
 class App extends Component {
   render() {
@@ -12,7 +13,8 @@ class App extends Component {
     const state = store.getState();
     const {
       message,
-      categories
+      categories,
+      toastOpen,
     } = state;
 
     return (
