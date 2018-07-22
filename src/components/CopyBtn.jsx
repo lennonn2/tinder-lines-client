@@ -4,6 +4,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 
 import { copyMessage, showCopiedToast, hideCopiedToast } from '../actions';
 import CopyIcon from './copy-icon';
+import { increment } from '../utils';
 import './CopyBtn.css';
 
 const mapStateToProps = ({toastOpen}) => {
@@ -12,10 +13,11 @@ const mapStateToProps = ({toastOpen}) => {
   }
 };
 
-const copyText = text => {
+const copyText = ({copyText, id}) => {
+  // increment(id, 'copies');
   const tmpEl = document.createElement('input');
   document.body.appendChild(tmpEl);
-  tmpEl.value = text;
+  tmpEl.value = copyText;
   tmpEl.select();
   document.execCommand("copy");
   tmpEl.remove();
@@ -24,7 +26,7 @@ const copyText = text => {
 const mapDispatchToProps = (dispatch, props) => {
   return {
     copyMessage: () => {
-      copyText(props.copyText)
+      copyText(props)
       dispatch(showCopiedToast());
       setTimeout(() => {dispatch(hideCopiedToast())}, 2000)
     }

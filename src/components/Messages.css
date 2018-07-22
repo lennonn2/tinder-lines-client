@@ -1,6 +1,6 @@
 .messagesContainer {
   flex-direction: column;
-  height: 400px;
+  height: 360px;
   align-items: flex-end;
   width: 330px;
   justify-self: center;
