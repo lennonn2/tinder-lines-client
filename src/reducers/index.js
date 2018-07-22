@@ -51,6 +51,16 @@ export default (state = defaultState, action) => {
         ...state,
         lines: action.lines
       };
+    case 'SHOW_TOAST':
+      return {
+        ...state,
+        toastOpen: true
+      }
+    case 'HIDE_TOAST':
+      return {
+        ...state,
+        toastOpen: false
+      }
     default:
       return state;
   }

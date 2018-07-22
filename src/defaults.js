@@ -33,4 +33,5 @@ export default {
     checked: true,
   }],
   lines: [],
+  toastOpen: false,
 }

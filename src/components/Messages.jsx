@@ -2,36 +2,25 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Message from './Message';
+import { increment } from '../utils';
 
 import './Messages.css';
-
-const incrementViews = id => {
-  fetch('https://qvqnyun7pl.execute-api.us-east-1.amazonaws.com/prod/views', {
-    body: JSON.stringify({id}), // must match 'Content-Type' header
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, same-origin, *omit
-    headers: {
-      'content-type': 'application/json'
-    },
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, cors, *same-origin
-  });
-}
 
 class Messages extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.content.id !== 0 && nextProps.content.id !== this.props.content.id) {
-      // incrementViews(nextProps.content.id);
+      // increment(nextProps.content.id, 'views');
     }
   }
 
   render() {
+    const { id } = this.props.content;
     return (
       <div className='messagesContainer'>
         {
           this.props.content.lines.map((msg) => {
-            return <Message key={msg.index} isReply={msg.isReply}>{msg.text}</Message>
+            return <Message key={msg.index} isReply={msg.isReply} id={id}>{msg.text}</Message>
           })
         }
       </div>
