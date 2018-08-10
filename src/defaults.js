@@ -2,7 +2,7 @@ export default {
   message: {
     id: 0,
     lines: [{
-      text: 'Welcome message',
+      text: 'Select your categories and click \'Generate\' to up your Tinder game 😏',
       index: 0,
       isReply: false,
     }]
