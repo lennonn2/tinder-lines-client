@@ -20,8 +20,6 @@ class App extends Component {
     return (
       <Provider store={this.props.store}>
         <div className="App">
-          <header>Header</header>
-          <div className="ad1" id="ad1">Ad 1</div>
           <Messages
             className="messages"
             id="messages"
@@ -36,8 +34,6 @@ class App extends Component {
             class="checkboxes"
             id="checkboxes"
           />
-          <div className="ad2" id="ad2">Ad 2</div>
-          <footer>Footer</footer>
         </div>
       </Provider>
     );

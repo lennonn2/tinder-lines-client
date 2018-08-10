@@ -4,14 +4,10 @@
   height: 100vh;
 
   grid-template-areas:
-    "header"
-    "ad1"
     "message"
     "button"
-    "checkboxes"
-    "ad2"
-    "footer";
-  grid-template-rows: 50px 100px 2fr 75px 2fr 100px 50px;
+    "checkboxes";
+  grid-template-rows: 2fr 75px 2fr;
 }
 
 .App > * {
@@ -23,27 +19,13 @@
 
 @media (min-width: 600px) {
   .App {
-    grid-template-areas: 
-      "header header"
-      "message ad1"
-      "button ad1"
-      "checkboxes ad2"
-      "footer footer";
-    grid-template-rows: 50px 2fr 100px 2fr 50px;
-    grid-template-columns: 1fr 300px;
+    grid-template-areas:
+      "message"
+      "button"
+      "checkboxes";
+    grid-template-rows: 2fr 100px 2fr ;
+    grid-template-columns: 1fr;
   }
-}
-
-header {
-  grid-area: header;
-}
-
-.ad1 {
-  grid-area: ad1;
-}
-
-.ad2 {
-  grid-area: ad2;
 }
 
 .message {
@@ -56,8 +38,4 @@ header {
 
 .button {
   grid-area: button;
-}
-
-footer {
-  grid-area: footer;
 }
