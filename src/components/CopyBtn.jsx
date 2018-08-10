@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import Snackbar from '@material-ui/core/Snackbar';
 
-import { copyMessage, showCopiedToast, hideCopiedToast } from '../actions';
+import { showCopiedToast, hideCopiedToast } from '../actions';
 import CopyIcon from './copy-icon';
 import { increment } from '../utils';
 import './CopyBtn.css';
@@ -14,7 +14,7 @@ const mapStateToProps = ({toastOpen}) => {
 };
 
 const copyText = ({copyText, id}) => {
-  // increment(id, 'copies');
+  increment(id, 'copies');
   const tmpEl = document.createElement('input');
   document.body.appendChild(tmpEl);
   tmpEl.value = copyText;
