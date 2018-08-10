@@ -7,9 +7,10 @@ import { updateMessage } from '../actions';
 import './Button.css';
 
 const Button = ({ updateMessage, categories }) => {
+  const update = () => setTimeout(updateMessage, 300);
   return (
     <div className='buttonContainer'>
-      <a className='button' onClick={updateMessage}>Generate
+      <a className='button' onClick={update}>Generate
         <Logo />
       </a>
     </div>
