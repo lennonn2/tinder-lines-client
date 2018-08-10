@@ -10,7 +10,7 @@ class Messages extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.content.id !== 0 && nextProps.content.id !== this.props.content.id) {
-      // increment(nextProps.content.id, 'views');
+      increment(nextProps.content.id, 'views');
     }
   }
 
