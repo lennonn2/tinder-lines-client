@@ -19,6 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "sync": "aws s3 sync build/ s3://tinder-app-client"
+    "sync": "aws s3 sync build/ s3://tinder-app-client",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E2BW2RSN67OT7Q --paths /"
   }
 }
