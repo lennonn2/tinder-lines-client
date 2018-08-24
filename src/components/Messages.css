@@ -2,7 +2,7 @@
   flex-direction: column;
   height: 360px;
   align-items: flex-end;
-  width: 330px;
+  width: 78%;
   justify-self: center;
   justify-content: flex-start;
   padding: 30px;
@@ -14,4 +14,5 @@
   overflow: auto;
   align-self: flex-end;
   margin-top: 5vh;
+  max-width: 330px;
 }
